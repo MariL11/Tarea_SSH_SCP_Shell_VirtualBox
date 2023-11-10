@@ -55,7 +55,34 @@ sistemas operativos.
 8. Seleccionamos "Red".
 ![Click Red](/img/Imagen_16.PNG)
 
-9. Seleccionamos el desplegable "Conectado a" y elegimos "Red Nat".
+9. Seleccionamos el desplegable "Conectado a" y elegimos la red que creamos con anterioridad (Red Nat - RedNat_Despliegue).
 ![Click desplegable "Conectado a"](/img/Imagen_17.PNG)
 ![Click Red Nat](/img/Imagen_18.png)
 
+10. Hacemos click en "Aceptar" y podremos ver, en la información general de la máquina virtual, la red Nat recien aplicada.
+![Click Aceptar Red Nat](/img/Imagen_19.PNG)
+![Casa: Información general Red](/img/Imagen_20.PNG)
+
+11. Volvemos a repetir los pasos anteriores con la otra máquina virtual desde el número 7.
+![Servidor: Información general Red](/img/Imagen_21.PNG)
+
+12. Iniciamos las máquinas virtuales dandole al botón de "Iniciar", teniendo seleccionado antes una máquina, y comenzamos a instalar los sistemas operativos.
+![Click Iniciar](/img/Imagen_22.PNG)
+
+13. Nos saldrá la siguiente pantalla en ambas máquinas y seleccionamos "Try or Install Ubuntu Server" en Servidor y "Try or Install LUbuntu" en Casa.
+* Servidor
+![Seleccionar Try or Install Ubuntu Server](/img/Imagen_23.png)
+
+* Casa
+![Seleccionar Try or Install LUbuntu](/img/Imagen_24.png)
+
+14. Vamos realizando las instalaciones con las configuraciones que deseemos, y una vez que nos aparezca insertar los datos de los usuarios y contraseñas, tendremos que poner lo siguiente:
+* Servidor -> Usuario: sergio, Contraseña: sergio
+![Servidor:Configuración de perfil](/img/Imagen_25.png)
+![Servidor:Rellenado información perfil](/img/Imagen_26.png)
+
+* Casa -> Usuario: carmen, Contraseña: carmen
+![Casa:Configuración de perfil](/img/Imagen_27.PNG)
+![Casa:Rellenado información perfil](/img/Imagen_28.PNG)
+
+15. Seguimos avanzando con las instalaciones y 
