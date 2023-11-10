@@ -24,4 +24,4 @@
 > Recuerda asignar la interfraz de red  **red NAT** antes de iniciar las MV para realizar la instalación de los
 sistemas operativos.
 
-> * **Servidor**: con un Ubuntu server sin entorno gráfico.
+> * **Servidor**: con un Ubuntu server sin entorno gráfico. nn
