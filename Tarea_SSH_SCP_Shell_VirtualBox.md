@@ -364,7 +364,7 @@ nombre_del_usuario_servidor@IP_invitado -p puerto_anfitrión
 ```
 ![Comando conexión Casa - Servidor](/img/Imagen_83.PNG)
 
-2. Autorizadamos la conexión escribiendo "yes".
+2. Autorizamos la conexión escribiendo "yes".
 ![Autorizar conexión Casa - Servidor](/img/Imagen_84.PNG)
 
 3. Una vez conseguida la conexión, nos saldrá en la terminal el usuario de Servidor en color verde.
