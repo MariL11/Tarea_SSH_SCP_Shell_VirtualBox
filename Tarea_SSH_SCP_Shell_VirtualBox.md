@@ -238,7 +238,102 @@ sistemas operativos.
 
 5. Modificamos los puertos con las características que poseen cada máquina virtual y le damos a "Aceptar".
 ![Modificar puertos](/img/Imagen_65.PNG)
+![Click Aceptar](/img/Imagen_66.PNG)
+
+## SSH
+### Conexión mediante usuario y contraseña
+
+#### Equipo **Anfitrión**:
+
+> Conéctate desde el **equipo anfitrión** a **Servidor**.
+
+1. Escribimos "Símbolo del sistema" en el buscador de la barra de tareas y hacemos click sobre la aplicación.
+![Escribir Símbolo del sistema en Buscador](/img/Imagen_67.png)
+![Click Símbolo del sistema](/img/Imagen_68.png)
+
+2. Escribimos el siguiente comando y le damos a "Enter":
+```bash
+nombre_del_usuario_servidor@127.0.0.1 -p puerto_anfitrión
+```
+![Comando conexión Servidor](/img/Imagen_69.PNG)
+
+3. Autorizadamos la conexión escribiendo "yes".
+![Autorizar conexión Servidor](/img/Imagen_70.PNG)
+
+4. Una vez conseguida la conexión, nos saldrá en la terminal el usuario de Servidor en color verde.
+![Usuario Servidor en Equipo Anfitrión](/img/Imagen_71.PNG)
+
+> Para comprobar que estás en el servidor, crea un archivo de texto llamando <span style="color:navajowhite">servidor.txt</span>.
+
+1. Escribimos el comando 
+"touch nombre_archivo" y le damos a "Enter".
+![Crear archivo servidor.txt](/img/Imagen_72.PNG)
+
+2. Nos dirigimos a la máquina virtual Servidor y escribimos el comando "ls -la" para ver si se ha creado el archivo servidor.txt.
+![Ver archivo en Servidor](/img/Imagen_73.PNG)
 
 
+> Desconéctacte del servidor.
+1. Escribimos "exit" en el terminal del equipo anfitrión.
+![Comando exit Equipo Anfitrión](/img/Imagen_74.PNG)
+![Confirmación Desconexión Servidor](/img/Imagen_75.PNG)
 
+> Conéctate desde el **equipo anfitrión** a **Casa**.
 
+1. Escribimos el siguiente comando y le damos a "Enter":
+```bash
+nombre_del_usuario_casa@127.0.0.1 -p puerto_anfitrión
+```
+![Comando conexión Casa](/img/Imagen_76.PNG)
+
+2. Autorizadamos la conexión escribiendo "yes".
+![Autorizar conexión Casa](/img/Imagen_77.PNG)
+
+3. Una vez conseguida la conexión, nos saldrá en la terminal el usuario de Casa en color verde.
+![Usuario Casa en Equipo Anfitrión](/img/Imagen_78.PNG)
+
+> Para comprobar que estás en el servidor, crea un archivo de texto llamado <span style="color:navajowhite">casa.txt</span>.
+
+1. Escribimos el comando 
+"touch nombre_archivo" y le damos a "Enter".
+![Crear archivo casa.txt Casa](/img/Imagen_79.PNG)
+
+2. Nos dirigimos a la máquina virtual Casa y escribimos el comando "ls -la" para ver si se ha creado el archivo casa.txt.
+![Ver archivo en Casa](/img/Imagen_80.PNG)
+
+> Desconéctate del servidor.
+1. Escribimos "exit" en el terminal del equipo anfitrión.
+![Comando exit Equipo Anfitrión](/img/Imagen_81.PNG)
+![Confirmación Desconexión Casa](/img/Imagen_82.PNG)
+
+#### Equipo **Casa**:
+> Conéctate desde **Casa** a **Servidor**
+
+1. Abrimos el terminal en Casa,  escribimos el siguiente comando y le damos a "Enter":
+```bash
+nombre_del_usuario_servidor@IP_invitado -p puerto_anfitrión
+```
+![Comando conexión Casa - Servidor](/img/Imagen_83.PNG)
+
+2. Autorizadamos la conexión escribiendo "yes".
+![Autorizar conexión Casa - Servidor](/img/Imagen_84.PNG)
+
+3. Una vez conseguida la conexión, nos saldrá en la terminal el usuario de Servidor en color verde.
+![Usuario Servidor en Casa](/img/Imagen_85.PNG)
+
+> Para comprobar que estás en el servidor, crea un archivo de texto llamado <span style="color:navajowhite">casa.txt</span>.
+1. Escribimos el comando 
+"touch nombre_archivo" y le damos a "Enter".
+![Crear archivo casa.txt Servidor](/img/Imagen_86.PNG)
+
+2. Nos dirigimos a la máquina virtual Servidor y escribimos el comando "ls -la" para ver si se ha creado el archivo casa.txt.
+![Ver archivo en Servidor](/img/Imagen_87.PNG)
+
+> Desconéctate del servidor.
+1. Escribimos "exit" en el terminal de Casa.
+![Comando exit Casa](/img/Imagen_88.PNG)
+![Confirmación Desconexión Servidor](/img/Imagen_89.PNG)
+
+### Conexión mediante claves asimétricas.
+#### Equipo **Casa**:
+> Crea un par de claves con el protocolo <span style="color:navajowhite">ed25519</span> y con el nombre <span style="color:navajowhite">claves_trabajo</span>.
