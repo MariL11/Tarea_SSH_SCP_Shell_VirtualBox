@@ -473,3 +473,48 @@ Modificamos el puerto con las características que posee la máquina virtual y l
 > Copia el archivo anterior en **Servidor**, en la carpeta <span style="color:navajowhite">/var/www/html</span>.
 
 > Recuerda usar <span style="color:navajowhite">scp</span>.
+
+1. Copiamos el archivo y lo enviamos a Servidor a través del siguiente comando:
+```bash
+scp -i ./nombre_clave ./nombre_archivo nombre_del_usuario_servidor@IP_invitado:~/
+```
+![Copiar index.html y enviar a Servidor](/img/Imagen_114.PNG)
+![Index.html enviado](/img/Imagen_115.PNG)
+
+No podemos enviar el archivo directamente al /var/www/html debido a que no tenemos los permisos necesarios.
+
+2. Entramos desde Casa a Servidor a través de la clave claves_trabajo.
+![Entrar Servidor desde Casa](/img/Imagen_116.PNG)
+
+3. Utilizamos el comando "sudo mv index.html /var/www/html" para mover el archivo al directorio /var/www/html, y le damos a "Enter".
+![Mover index.html](/img/Imagen_117.PNG)
+
+4. Escribimos la contraseña del usuario sergio y pulsamos "Enter".
+![Escribir contraseña Servidor](/img/Imagen_118.PNG)
+
+5. Nos dirigimos al directorio /var/www/html a través del comando "cd" y usamos "ls -la" para ver el archivo index.html.
+![Comando cd y ver index.html](/img/Imagen_119.PNG)
+
+> Desde <span style="color:navajowhite">Casa</span> abre un navegador web y prueba que puedes acceder a la web.
+
+1. Seleccionamos el icono de Menú de la barra de tareas.
+![Click Menú Barra de tareas](/img/Imagen_37.PNG)
+
+2. Pasamos el ratón por encima de "Internet" y hacemos click en "Navegador web Firefox".
+![Click Firefox](/img/Imagen_120.PNG)
+
+3. Escribimos IP anfitrión : Puerto anfitrión (127.0.0.1 : 8080) y le damos a "Enter".
+![Dirección web](/img/Imagen_121.PNG)
+
+4. Obtenemos la información guardada en el index.html.
+![Visualización index.html](/img/Imagen_122.PNG)
+
+#### Equipo **Anfitrión**:
+> Desde el <span style="color:navajowhite">equipo</span> anfitrión abre un navegador web y prueba que puedes acceder a la web.
+
+1. Abrimos un navegador web, esbribimos la IP de Servidor (10.0.2.10) y pulsamos "Enter".
+![Dirección web](/img/Imagen%20123.PNG)
+
+2. Obtenemos la información guardada del archivo index.html.
+![Visualización index.html](/img/Imagen%20124.PNG)
+
