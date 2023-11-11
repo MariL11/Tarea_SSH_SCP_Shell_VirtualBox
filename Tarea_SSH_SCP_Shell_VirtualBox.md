@@ -72,46 +72,64 @@ sistemas operativos.
 ![Click Iniciar](/img/Imagen_22.PNG)
 
 13. Nos saldrá la siguiente pantalla en ambas máquinas y seleccionamos "Try or Install Ubuntu Server" en Servidor y "Try or Install LUbuntu" en Casa.
+
 * Servidor
+
 ![Seleccionar Try or Install Ubuntu Server](/img/Imagen_23.png)
 
+
 * Casa
+
 ![Seleccionar Try or Install LUbuntu](/img/Imagen_24.png)
 
 14. Vamos realizando las instalaciones con las configuraciones que deseemos, y una vez que nos aparezca insertar los datos de los usuarios y contraseñas, tendremos que poner lo siguiente:
+
 * Servidor -> Usuario: sergio, Contraseña: sergio
+
 ![Servidor:Configuración de perfil](/img/Imagen_25.png)
 ![Servidor:Rellenado información perfil](/img/Imagen_26.png)
 
+
 * Casa -> Usuario: carmen, Contraseña: carmen
+
 ![Casa:Configuración de perfil](/img/Imagen_27.PNG)
 ![Casa:Rellenado información perfil](/img/Imagen_28.PNG)
 
 15. Seguimos avanzando con las instalaciones, y una vez finalizadas, les daremos a "Reiniciar   ahora" y a "Hecho".
+
 * Servidor
+
 ![Servidor: Seleccionar Reiniciar ahora](/img/Imagen_29.png)
 
 * Casa
+
 ![Casa: Seleccionar Hecho](/img/Imagen_30.PNG)
 
 16. Las máquinas virtuales se reiniciarán y mostrarán por pantalla que iniciemos sesión.
+
 * Servidor
+
 ![Servidor: Iniciar sesión](/img/Imagen_31.png)
 
 * Casa
+
 ![Casa: Inicias sesión](/img/Imagen_32.PNG)
 
 17. Introduccimos los usuarios y las contraseñas correspondientes, y entramos al servidor de Servidor y al escritorio de Casa.
+
 * Servidor
+
 ![Servidor: Entrada servidor](/img/Imagen_33.PNG)
 
 * Casa
+
 ![Casa: Entrada al escritorio](/img/Imagen_34.PNG)
 
 
 > Usa el comando <span style="color:navajowhite">ip a</span> para ver las IP asignadas a cada MV.
 
 * Servidor
+
 1. Escribimos en la consola ip a, pulsamos Enter y obtendremos la IP de Servidor.
 ![Servidor: Comando ip a](/img/Imagen_35.PNG)
 
@@ -120,6 +138,7 @@ sistemas operativos.
 
 
 * Casa
+
 1. Seleccionamos el icono de Menú de la barra de tareas.
 ![Casa: Click Menú Barra de tareas](/img/Imagen_37.PNG)
 
@@ -138,39 +157,54 @@ sistemas operativos.
 
 
 1. Instalamos el openssh-server con el comando "sudo apt install openssh-server".
+
 * Servidor
+
 ![Servidor: Instalar OpenSSH-Server](/img/Imagen_41.PNG)
 
 * Casa
+
 ![Casa: Instalar OpenSSH-Server](/img/Imagen_42.PNG)
 
 2. En mitad de la instalación, nos mostrarán si deseamos continuar y escribiremos "S" y "Y".
+
 * Servidor
+
 ![Servidor: Confirmar continuidad instalación](/img/Imagen_43.PNG)
 
 * Casa
+
 ![Casa: Confirmar continuidad instalación](/img/Imagen_44.PNG)
 
 3. Y ya tendremos el openssh-server instalado en ambas máquinas.
+
 * Servidor
+
 ![Servidor: Instalación terminada](/img/Imagen_45.PNG)
 
 * Casa
+
 ![Casa: Instalación terminada](/img/Imagen_46.PNG)
 
 
 4. Instalamos el ufw con el comando "sudo apt install ufw".
+
 * Servidor
+
 ![Servidor: Instalar ufw](/img/Imagen_47.PNG) 
 
 * Casa
+
 ![Casa: Instalar ufw](/img/Imagen_48.PNG) 
 
 5. En esta ocasión, se nos muestran en ambas máquinas virtuales que el ufw ya está instalado. En caso contrario, debemos de confirmar la continuidad de la instalación como lo hicimos con el openssh-server y obtenemos el ufw instalado.
+
 * Servidor
+
 ![Servidor: ufw instalado](/img/Imagen_49.PNG) 
 
 * Casa
+
 ![Casa: ufw instalado](/img/Imagen_50.PNG) 
 
 
@@ -181,42 +215,57 @@ sistemas operativos.
 > Recuerda usar <span style="color:navajowhite">systemctl</span>.
 
 1. Comprobamos que el servicio ufw está activo a través del comando "sudo systemctl status ufw".
+
 * Servidor
+
 ![Servidor: comprobar estado ufw](/img/Imagen_51.PNG) 
 
 * Casa
+
 ![Casa: comprobar estado ufw](/img/Imagen_52.PNG) 
 
 2. Vemos el ufw activo en ambas máquinas.
+
 * Servidor
+
 ![Servidor: ufw activo](/img/Imagen_53.PNG) 
 
 * Casa
+
 ![Casa: ufw activo](/img/Imagen_54.PNG) 
 
 3. Comprobamos que el servicio ssh está activo a través del comando "sudo systemctl status ssh".
+
 * Servidor
+
 ![Servidor: comprobar estado ssh](/img/Imagen_55.PNG) 
 
 * Casa
+
 ![Casa: comprobar estado ssh](/img/Imagen_56.PNG) 
 
 4. Vemos el ssh activo en ambas máquinas.
+
 * Servidor
+
 ![Servidor: ssh activo](/img/Imagen_57.PNG) 
 
 * Casa
+
 ![Casa: ssh activo](/img/Imagen_58.PNG) 
 
 
 > Añade la regla en el cortafuegos para <span style="color:navajowhite">ssh</span>.
 
 1. Añadimos la regla en el cortafuegos a través del comando "sudo ufw allow OpenSSH" o "sudo ufw allow ssh".
+
 * Servidor
+
 ![Servidor: comando añadir regla cortafuegos](/img/Imagen_59.PNG) 
 ![Servidor: regla cortafuegos añadida](/img/Imagen_60.PNG)
 
 * Casa
+
 ![Casa: comando añadir regla cortafuegos](/img/Imagen_61.PNG) 
 ![Casa: regla cortafuegos añadida](/img/Imagen_62.PNG)
 
