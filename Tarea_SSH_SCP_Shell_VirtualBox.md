@@ -412,5 +412,64 @@ ssh -i ./nombre_clave nombre_del_usuario_servidor@IP_invitado
 4. Tendremos instalado el apache2.
 ![Instalado apache2](/img/Imagen_103.PNG)
 
+> Comprueba que el servicio <span style="color:navajowhite">apache2</span> está activo y en funcionamiento.
+1. Comprobamos que el servicio apache2 está activo a través del comando "sudo systemctl status apache2".
+![Comprobar estado apache2](/img/Imagen_104.PNG) 
 
+2. Vemos el apache2 activo.
+![Apache2 activo](/img/Imagen_105.PNG) 
 
+> Añade la regla en el cortafuegos para <span style="color:navajowhite">apache2</span>.
+1. Añadimos la regla en el cortafuegos a través del comando "sudo ufw allow Apache".
+![Comando añadir regla cortafuegos](/img/Imagen_106.PNG) 
+![Regla cortafuegos añadida](/img/Imagen_107.PNG) 
+
+> Añade en VirtualBox el redireccionamiento de puertos para poder acceder desde el **equipo anfitrión Servidor** con el servidor <span style="color:navajowhite">apache2</span>.
+1. Abrimos la aplicación Oracle VM VirtualBox y hacemos click sobre el siguiente icono:
+![Click a icono](/img/Imagen_01.PNG)
+
+2. Seleccionamos la opción "Red" y pulsamos sobre "Redes Nat".
+![Click opción Red](/img/Imagen_02.png)
+![Click Redes Nat](/img/Imagen_03.PNG)
+
+3. Pulsamos sobre "Reenvío de puertos".
+![Click Reenvío de puertos](/img/Imagen_63.PNG)
+
+4. Hacemos click sobre el icono verde y añadimos un nuevo puerto.
+Modificamos el puerto con las características que posee la máquina virtual y le damos a "Aceptar".
+![Click Aceptar](/img/Imagen_108.PNG)
+![Puerto apache creado](/img/Imagen_109.PNG)
+
+### SCP
+#### Equipo **Casa**:
+> Crea en el equipo **Casa** una página web <span style="color:navajowhite">index.html</span> como la siguiente con **tu nombre y apellidos**.
+
+``` html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Mi primer Servidor Apache</title>
+</head>
+<body>
+ <h1>Mi primer Servidor Apache</h1>
+ <h2>NOMBRE Y APELLIDOS</h2>
+ <h2>Despliegue de aplicaciones web</h2>
+</body>
+</html>
+```
+
+1. Escribimos el comando "nano nombre_archivo" y pulsamos "Enter".
+![Comando nano index.html](/img/Imagen_110.PNG)
+
+2. Se creará y se abrirá el archivo recién creado, y escribiremos el html con nuestro nombre y apellidos.
+![Abierto archivo index.html](/img/Imagen_111.PNG)
+![Escribir información html](/img/Imagen_112.PNG)
+
+3. Guardamos el archivo con el nombre index.html y utilizamos el comando "ls -la" para ver el archivo.
+![Ver archivo index.html](/img/Imagen_113.PNG)
+
+> Copia el archivo anterior en **Servidor**, en la carpeta <span style="color:navajowhite">/var/www/html</span>.
+
+> Recuerda usar <span style="color:navajowhite">scp</span>.
