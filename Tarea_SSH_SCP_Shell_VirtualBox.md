@@ -29,6 +29,8 @@ sistemas operativos.
 
 > Ten en cuenta que en los siguientes apartados tendrás que ir actualizando el redireccionamiento de puertos (post forward) según los servicios a los que quieras acceder desde el **equipo anfitrión**.
 
+> Desde cada MV muestra la configuración de las interfaces.
+
 1. Abrimos la aplicación Oracle VM VirtualBox y seleccionamos "Nueva".
 ![Click opción Nueva](/img/Imagen_07.PNG)
 
@@ -85,4 +87,57 @@ sistemas operativos.
 ![Casa:Configuración de perfil](/img/Imagen_27.PNG)
 ![Casa:Rellenado información perfil](/img/Imagen_28.PNG)
 
-15. Seguimos avanzando con las instalaciones y 
+15. Seguimos avanzando con las instalaciones, y una vez finalizadas, les daremos a "Reiniciar   ahora" y a "Hecho".
+* Servidor
+![Servidor: Seleccionar Reiniciar ahora](/img/Imagen_29.png)
+
+* Casa
+![Casa: Seleccionar Hecho](/img/Imagen_30.PNG)
+
+16. Las máquinas virtuales se reiniciarán y mostrarán por pantalla que iniciemos sesión.
+* Servidor
+![Servidor: Iniciar sesión](/img/Imagen_31.png)
+
+* Casa
+![Casa: Inicias sesión](/img/Imagen_32.PNG)
+
+17. Introduccimos los usuarios y las contraseñas correspondientes, y entramos al servidor de Servidor y al escritorio de Casa.
+* Servidor
+![Servidor: Entrada servidor](/img/Imagen_33.PNG)
+
+* Casa
+![Casa: Entrada al escritorio](/img/Imagen_34.PNG)
+
+
+> Usa el comando <span style="color:navajowhite">ip a</span> para ver las IP asignadas a cada MV.
+
+* Servidor
+1. Escribimos en la consola ip a, pulsamos Enter y obtendremos la IP de Servidor.
+![Servidor: Comando ip a](/img/Imagen_35.PNG)
+
+    IP: 10.0.2.10/24    
+![Servidor: Ver IP](/img/Imagen_36.PNG)
+
+
+* Casa
+1. Seleccionamos el icono de Menú de la barra de tareas.
+![Casa: Click Menú Barra de tareas](/img/Imagen_37.PNG)
+
+2. Pasamos el ratón por encima de "Herramientas del sistema" y hacemos click en "QTerminal".
+![Casa: Click QTerminal](/img/Imagen_38.PNG)
+
+3. Se abrirá la consola y escribimos el comando ip a para obtener la IP de Casa.
+![Casa: Comando ip a](/img/Imagen_39.PNG)
+
+    IP: 10.0.2.9/24
+![Casa: Ver IP](/img/Imagen_40.PNG)
+
+
+## Linux Shell
+> Instala o comprueba que ya estén instalados los servicios: <span style="color:navajowhite">openssh-server</span> y <span style="color:navajowhite">ufw</span>.
+
+> Comprueba que el servicio <span style="color:navajowhite">ufw</span> está activo y en funcionamiento.
+
+> Comprueba que el servicio <span style="color:navajowhite">ssh</span> está activo y en funcionamiento.
+
+> Recuerda usar <span style="color:navajowhite">systemctl</span>.
