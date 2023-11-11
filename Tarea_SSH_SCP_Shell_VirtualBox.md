@@ -296,7 +296,7 @@ sistemas operativos.
 
 > Conéctate desde el **equipo anfitrión** a **Servidor**.
 
-1. Escribimos "Símbolo del sistema" en el buscador de la barra de tareas y hacemos click sobre la aplicación.
+1. Escribimos "Símbolo del sistema" en el buscador de la Barra de tareas y hacemos click sobre la aplicación.
 ![Escribir Símbolo del sistema en Buscador](/img/Imagen_67.png)
 ![Click Símbolo del sistema](/img/Imagen_68.png)
 
