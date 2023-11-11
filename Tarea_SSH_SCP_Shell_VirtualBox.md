@@ -274,7 +274,7 @@ nombre_del_usuario_servidor@127.0.0.1 -p puerto_anfitrión
 
 
 > Desconéctacte del servidor.
-1. Escribimos "exit" en el terminal del equipo anfitrión.
+1. Escribimos "exit" en la terminal del equipo anfitrión.
 ![Comando exit Equipo Anfitrión](/img/Imagen_74.PNG)
 ![Confirmación Desconexión Servidor](/img/Imagen_75.PNG)
 
@@ -302,7 +302,7 @@ nombre_del_usuario_casa@127.0.0.1 -p puerto_anfitrión
 ![Ver archivo en Casa](/img/Imagen_80.PNG)
 
 > Desconéctate del servidor.
-1. Escribimos "exit" en el terminal del equipo anfitrión.
+1. Escribimos "exit" en la terminal del equipo anfitrión.
 ![Comando exit Equipo Anfitrión](/img/Imagen_81.PNG)
 ![Confirmación Desconexión Casa](/img/Imagen_82.PNG)
 
@@ -330,10 +330,38 @@ nombre_del_usuario_servidor@IP_invitado -p puerto_anfitrión
 ![Ver archivo en Servidor](/img/Imagen_87.PNG)
 
 > Desconéctate del servidor.
-1. Escribimos "exit" en el terminal de Casa.
+1. Escribimos "exit" en la terminal de Casa.
 ![Comando exit Casa](/img/Imagen_88.PNG)
 ![Confirmación Desconexión Servidor](/img/Imagen_89.PNG)
 
 ### Conexión mediante claves asimétricas.
 #### Equipo **Casa**:
 > Crea un par de claves con el protocolo <span style="color:navajowhite">ed25519</span> y con el nombre <span style="color:navajowhite">claves_trabajo</span>.
+
+1. Escribimos en la terminal el comando "ssh-keygen -t ed25519".
+![Comando ssh-keygen](/img/Imagen_90.PNG)
+
+2. Escribimos el nombre "claves_trabajo" para las claves.
+![Escribir nombre claves](/img/Imagen_91.PNG)
+
+3. Nos saldrá el siguiente mensajes y le daremos a "Enter":
+![Passphrases](/img/Imagen_92.PNG)
+
+4. Obtendremos un par de claves.
+![Par de claves hechas](/img/Imagen_93.PNG)
+![Ver Par de claves](/img/Imagen_94.PNG)
+
+> Exporta la clave al **Servidor**.
+1. Escribimos el siguiente comando en Casa y le damos a "Enter":
+```bash
+ssh-copy-id -p puerto_anfitrión -i claves_trabajo.pub nombre_del_usuario_servidor@IP_invitado
+```
+![Comando exporta clave](/img/Imagen_95.PNG)
+
+2. Introduccimos la contraseña del usuario sergio.
+![Introduccir contraseña Servidor](/img/Imagen_96.PNG)
+
+3. Se nos mostrará por pantalla que la clave pública ha sido exportada con éxito. La clave privada nunca se deberá de compartir.
+![Clave exportada](/img/Imagen_97.png)
+
+> Conéctate desde **Casa** a **Servidor** mediante la <span style="color:navajowhite">clave claves_trabajo</span>.
