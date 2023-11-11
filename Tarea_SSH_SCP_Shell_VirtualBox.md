@@ -136,8 +136,109 @@ sistemas operativos.
 ## Linux Shell
 > Instala o comprueba que ya estén instalados los servicios: <span style="color:navajowhite">openssh-server</span> y <span style="color:navajowhite">ufw</span>.
 
+
+1. Instalamos el openssh-server con el comando "sudo apt install openssh-server".
+* Servidor
+![Servidor: Instalar OpenSSH-Server](/img/Imagen_41.PNG)
+
+* Casa
+![Casa: Instalar OpenSSH-Server](/img/Imagen_42.PNG)
+
+2. En mitad de la instalación, nos mostrarán si deseamos continuar y escribiremos "S" y "Y".
+* Servidor
+![Servidor: Confirmar continuidad instalación](/img/Imagen_43.PNG)
+
+* Casa
+![Casa: Confirmar continuidad instalación](/img/Imagen_44.PNG)
+
+3. Y ya tendremos el openssh-server instalado en ambas máquinas.
+* Servidor
+![Servidor: Instalación terminada](/img/Imagen_45.PNG)
+
+* Casa
+![Casa: Instalación terminada](/img/Imagen_46.PNG)
+
+
+4. Instalamos el ufw con el comando "sudo apt install ufw".
+* Servidor
+![Servidor: Instalar ufw](/img/Imagen_47.PNG) 
+
+* Casa
+![Casa: Instalar ufw](/img/Imagen_48.PNG) 
+
+5. En esta ocasión, se nos muestran en ambas máquinas virtuales que el ufw ya está instalado. En caso contrario, debemos de confirmar la continuidad de la instalación como lo hicimos con el openssh-server y obtenemos el ufw instalado.
+* Servidor
+![Servidor: ufw instalado](/img/Imagen_49.PNG) 
+
+* Casa
+![Casa: ufw instalado](/img/Imagen_50.PNG) 
+
+
 > Comprueba que el servicio <span style="color:navajowhite">ufw</span> está activo y en funcionamiento.
 
 > Comprueba que el servicio <span style="color:navajowhite">ssh</span> está activo y en funcionamiento.
 
 > Recuerda usar <span style="color:navajowhite">systemctl</span>.
+
+1. Comprobamos que el servicio ufw está activo a través del comando "sudo systemctl status ufw".
+* Servidor
+![Servidor: comprobar estado ufw](/img/Imagen_51.PNG) 
+
+* Casa
+![Casa: comprobar estado ufw](/img/Imagen_52.PNG) 
+
+2. Vemos el ufw activo en ambas máquinas.
+* Servidor
+![Servidor: ufw activo](/img/Imagen_53.PNG) 
+
+* Casa
+![Casa: ufw activo](/img/Imagen_54.PNG) 
+
+3. Comprobamos que el servicio ssh está activo a través del comando "sudo systemctl status ssh".
+* Servidor
+![Servidor: comprobar estado ssh](/img/Imagen_55.PNG) 
+
+* Casa
+![Casa: comprobar estado ssh](/img/Imagen_56.PNG) 
+
+4. Vemos el ssh activo en ambas máquinas.
+* Servidor
+![Servidor: ssh activo](/img/Imagen_57.PNG) 
+
+* Casa
+![Casa: ssh activo](/img/Imagen_58.PNG) 
+
+
+> Añade la regla en el cortafuegos para <span style="color:navajowhite">ssh</span>.
+
+1. Añadimos la regla en el cortafuegos a través del comando "sudo ufw allow OpenSSH" o "sudo ufw allow ssh".
+* Servidor
+![Servidor: comando añadir regla cortafuegos](/img/Imagen_59.PNG) 
+![Servidor: regla cortafuegos añadida](/img/Imagen_60.PNG)
+
+* Casa
+![Casa: comando añadir regla cortafuegos](/img/Imagen_61.PNG) 
+![Casa: regla cortafuegos añadida](/img/Imagen_62.PNG)
+
+> Añade en VirtualBox el redireccionamiento de puertos para poder acceder desde el **equipo anfitrión** a **Servidor** y **Casa** con el servicio <span style="color:navajowhite">ssh</span>.
+
+1. Abrimos la aplicación Oracle VM VirtualBox y hacemos click sobre el siguiente icono:
+![Click a icono](/img/Imagen_01.PNG)
+
+2. Seleccionamos la opción "Red" y pulsamos sobre "Redes Nat".
+![Click opción Red](/img/Imagen_02.png)
+![Click Redes Nat](/img/Imagen_03.PNG)
+
+3. Pulsamos sobre "Reenvío de puertos".
+![Click Reenvío de puertos](/img/Imagen_63.PNG)
+
+4. Hacemos click sobre el icono verde y añadimos dos puertos.
+![Click Icono Verde](/img/Imagen_64.PNG)
+![Añadir puertos](/img/Imagen_65.PNG)
+
+5. Modificamos los puertos con las características que poseen cada máquina virtual y le damos a "Aceptar".
+![Modificar puertos](/img/Imagen_65.PNG)
+
+
+
+
