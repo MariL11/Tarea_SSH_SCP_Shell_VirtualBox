@@ -337,6 +337,7 @@ nombre_del_usuario_servidor@IP_invitado -p puerto_anfitrión
 ### Conexión mediante claves asimétricas.
 #### Equipo **Casa**:
 > Crea un par de claves con el protocolo <span style="color:navajowhite">ed25519</span> y con el nombre <span style="color:navajowhite">claves_trabajo</span>.
+> Recuerda usar <span style="color:navajowhite">ssh-keygen</span>.
 
 1. Escribimos en la terminal el comando "ssh-keygen -t ed25519".
 ![Comando ssh-keygen](/img/Imagen_90.PNG)
@@ -351,7 +352,7 @@ nombre_del_usuario_servidor@IP_invitado -p puerto_anfitrión
 ![Par de claves hechas](/img/Imagen_93.PNG)
 ![Ver Par de claves](/img/Imagen_94.PNG)
 
-> Exporta la clave al **Servidor**.
+> Exporta la clave al **Servidor**. > Recuerda usar <span style="color:navajowhite">ssh-copy-id</span>.
 1. Escribimos el siguiente comando en Casa y le damos a "Enter":
 ```bash
 ssh-copy-id -p puerto_anfitrión -i claves_trabajo.pub nombre_del_usuario_servidor@IP_invitado
@@ -365,3 +366,51 @@ ssh-copy-id -p puerto_anfitrión -i claves_trabajo.pub nombre_del_usuario_servid
 ![Clave exportada](/img/Imagen_97.png)
 
 > Conéctate desde **Casa** a **Servidor** mediante la <span style="color:navajowhite">clave claves_trabajo</span>.
+1. Escribimos el siguiente comando y le damos a "Enter":
+```bash
+ssh -i ./nombre_clave nombre_del_usuario_servidor@IP_invitado
+```
+![Clave conexión Casa - Servidor](/img/Imagen_97.png)
+
+2. Una vez conseguida la conexión, nos saldrá en la terminal el usuario de Servidor en color verde.
+![Usuario Servidor en Casa](/img/Imagen_98.PNG)
+
+> Para comprobar que estás en el servidor, crea un archivo de texto llamado <span style="color:navajowhite">claves.txt</span>.
+1. Escribimos el comando 
+"touch nombre_archivo" y le damos a "Enter".
+
+2. Nos dirigimos a la máquina virtual Servidor y escribimos el comando "ls -la" para ver si se ha creado el archivo claves.txt.
+![Ver archivo en Servidor](/img/Imagen_99.PNG)
+
+> Desconéctate del servidor.
+1. Escribimos "exit" en la terminal de Casa.
+![Comando exit Casa](/img/Imagen_88.PNG)
+![Confirmación Desconexión Servidor](/img/Imagen_89.PNG)
+
+### Apache
+#### Equipo **Casa**:
+> Conéctacte desde **Casa** a **Servidor** mediante la clave  <span style="color:navajowhite">claves_trabajo</span>.
+1. Escribimos el siguiente comando y le damos a "Enter":
+```bash
+ssh -i ./nombre_clave nombre_del_usuario_servidor@IP_invitado
+```
+![Clave conexión Casa - Servidor](/img/Imagen_97.png)
+
+2. Una vez conseguida la conexión, nos saldrá en la terminal el usuario de Servidor en color verde.
+![Usuario Servidor en Casa](/img/Imagen_98.PNG)
+
+> Instala en el equipo **Servidor** el servicio <span style="color:navajowhite">apache2</span>.
+1. Escribimos en la terminal el comando "sudo apt install apache2".
+![Comando sudo apt install apache2](/img/Imagen_100.PNG)
+
+2. Introducimos la contraseña del usuario sergio.
+![Escribir contraseña sergio](/img/Imagen_101.PNG)
+
+3. Autorizamos la instalación escribiendo "S".
+![Autorizar instalación apache2](/img/Imagen_102.PNG)
+
+4. Tendremos instalado el apache2.
+![Instalado apache2](/img/Imagen_103.PNG)
+
+
+
