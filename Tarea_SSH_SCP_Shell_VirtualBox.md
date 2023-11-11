@@ -61,7 +61,7 @@ sistemas operativos.
 ![Click desplegable "Conectado a"](/img/Imagen_17.PNG)
 ![Click Red Nat](/img/Imagen_18.png)
 
-10. Hacemos click en "Aceptar" y podremos ver, en la información general de la máquina virtual, la red Nat recien aplicada.
+10. Hacemos click en "Aceptar" y podremos ver, en la información general de la máquina virtual, la red Nat recién aplicada.
 ![Click Aceptar Red Nat](/img/Imagen_19.PNG)
 ![Casa: Información general Red](/img/Imagen_20.PNG)
 
@@ -130,7 +130,7 @@ sistemas operativos.
 
 * Servidor
 
-1. Escribimos en la consola ip a, pulsamos Enter y obtendremos la IP de Servidor.
+1. Escribimos en la consola "ip a", pulsamos "Enter" y obtendremos la IP de Servidor.
 ![Servidor: Comando ip a](/img/Imagen_35.PNG)
 
     IP: 10.0.2.10/24    
@@ -145,7 +145,7 @@ sistemas operativos.
 2. Pasamos el ratón por encima de "Herramientas del sistema" y hacemos click en "QTerminal".
 ![Casa: Click QTerminal](/img/Imagen_38.PNG)
 
-3. Se abrirá la consola y escribimos el comando ip a para obtener la IP de Casa.
+3. Se abrirá la consola y escribimos el comando "ip a" para obtener la IP de Casa.
 ![Casa: Comando ip a](/img/Imagen_39.PNG)
 
     IP: 10.0.2.9/24
@@ -302,7 +302,7 @@ sistemas operativos.
 
 2. Escribimos el siguiente comando y le damos a "Enter":
 ```bash
-nombre_del_usuario_servidor@127.0.0.1 -p puerto_anfitrión
+ssh nombre_del_usuario_servidor@127.0.0.1 -p puerto_anfitrión
 ```
 ![Comando conexión Servidor](/img/Imagen_69.PNG)
 
@@ -331,7 +331,7 @@ nombre_del_usuario_servidor@127.0.0.1 -p puerto_anfitrión
 
 1. Escribimos el siguiente comando y le damos a "Enter":
 ```bash
-nombre_del_usuario_casa@127.0.0.1 -p puerto_anfitrión
+ssh nombre_del_usuario_casa@127.0.0.1 -p puerto_anfitrión
 ```
 ![Comando conexión Casa](/img/Imagen_76.PNG)
 
@@ -360,7 +360,7 @@ nombre_del_usuario_casa@127.0.0.1 -p puerto_anfitrión
 
 1. Abrimos el terminal en Casa,  escribimos el siguiente comando y le damos a "Enter":
 ```bash
-nombre_del_usuario_servidor@IP_invitado -p puerto_anfitrión
+ssh nombre_del_usuario_servidor@IP_invitado -p puerto_anfitrión
 ```
 ![Comando conexión Casa - Servidor](/img/Imagen_83.PNG)
 
@@ -401,7 +401,7 @@ nombre_del_usuario_servidor@IP_invitado -p puerto_anfitrión
 ![Par de claves hechas](/img/Imagen_93.PNG)
 ![Ver Par de claves](/img/Imagen_94.PNG)
 
-> Exporta la clave al **Servidor**. > Recuerda usar <span style="color:navajowhite">ssh-copy-id</span>.
+> Exporta la clave al **Servidor**. Recuerda usar <span style="color:navajowhite">ssh-copy-id</span>.
 1. Escribimos el siguiente comando en Casa y le damos a "Enter":
 ```bash
 ssh-copy-id -p puerto_anfitrión -i claves_trabajo.pub nombre_del_usuario_servidor@IP_invitado
@@ -419,7 +419,7 @@ ssh-copy-id -p puerto_anfitrión -i claves_trabajo.pub nombre_del_usuario_servid
 ```bash
 ssh -i ./nombre_clave nombre_del_usuario_servidor@IP_invitado
 ```
-![Clave conexión Casa - Servidor](/img/Imagen_97.png)
+![Clave conexión Casa - Servidor](/img/Imagen_125.PNG)
 
 2. Una vez conseguida la conexión, nos saldrá en la terminal el usuario de Servidor en color verde.
 ![Usuario Servidor en Casa](/img/Imagen_98.PNG)
@@ -443,7 +443,7 @@ ssh -i ./nombre_clave nombre_del_usuario_servidor@IP_invitado
 ```bash
 ssh -i ./nombre_clave nombre_del_usuario_servidor@IP_invitado
 ```
-![Clave conexión Casa - Servidor](/img/Imagen_97.png)
+![Clave conexión Casa - Servidor](/img/Imagen_125.PNG)
 
 2. Una vez conseguida la conexión, nos saldrá en la terminal el usuario de Servidor en color verde.
 ![Usuario Servidor en Casa](/img/Imagen_98.PNG)
@@ -465,7 +465,7 @@ ssh -i ./nombre_clave nombre_del_usuario_servidor@IP_invitado
 1. Comprobamos que el servicio apache2 está activo a través del comando "sudo systemctl status apache2".
 ![Comprobar estado apache2](/img/Imagen_104.PNG) 
 
-2. Vemos el apache2 activo.
+2. Veremos el apache2 activo.
 ![Apache2 activo](/img/Imagen_105.PNG) 
 
 > Añade la regla en el cortafuegos para <span style="color:navajowhite">apache2</span>.
