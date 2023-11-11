@@ -561,8 +561,8 @@ No podemos enviar el archivo directamente al /var/www/html debido a que no tenem
 #### Equipo **Anfitrión**:
 > Desde el <span style="color:navajowhite">equipo</span> anfitrión abre un navegador web y prueba que puedes acceder a la web.
 
-1. Abrimos un navegador web, esbribimos la IP de Servidor (10.0.2.10) y pulsamos "Enter".
-![Dirección web](/img/Imagen_126.png)
+1. Abrimos un navegador web, escribimos la IP de Servidor (10.0.2.10) y pulsamos "Enter".
+![Dirección web](/img/Imagen_123.png)
 
 2. Obtenemos la información guardada del archivo index.html.
 ![Visualización index.html](/img/Imagen_124.PNG)
