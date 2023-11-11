@@ -546,7 +546,7 @@ No podemos enviar el archivo directamente al /var/www/html debido a que no tenem
 
 > Desde <span style="color:navajowhite">Casa</span> abre un navegador web y prueba que puedes acceder a la web.
 
-1. Seleccionamos el icono de Menú de la barra de tareas.
+1. Seleccionamos el icono de Menú de la Barra de tareas.
 ![Click Menú Barra de tareas](/img/Imagen_37.PNG)
 
 2. Pasamos el ratón por encima de "Internet" y hacemos click en "Navegador web Firefox".
